@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5090698015472135166
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 67.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540713180476792216, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025909818230063645, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d7f6a8ebe094483a974dbcdcf2084c6, type: 2}
+    - target: {fileID: 8047069966464408491, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
+      propertyPath: m_Name
+      value: Launch Pad (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0120b43f635a54f3aa5890b455d9d1ec, type: 3}
