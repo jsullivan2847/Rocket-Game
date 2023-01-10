@@ -28,11 +28,11 @@ public class CollisionHandler : MonoBehaviour
                     break;
                 case
                "Friendly":
-                    Debug.Log("Friendly");
+                    // Debug.Log("Friendly");
                     break;
                 case
                "Fuel":
-                    Debug.Log("Fuel");
+                    // Debug.Log("Fuel");
                     break;
                 default:
                     StartCrash();

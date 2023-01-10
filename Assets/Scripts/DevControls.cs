@@ -11,9 +11,9 @@ public class DevControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(currentScene);
+        // Debug.Log(currentScene);
         CollisionHandler collision = this.GetComponent<CollisionHandler>();
-        Debug.Log(collision);
+        // Debug.Log(collision);
     }
 
     // Update is called once per frame
