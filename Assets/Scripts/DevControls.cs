@@ -8,6 +8,7 @@ public class DevControls : MonoBehaviour
     Scene currentScene;
     public CollisionHandler collision;
     public MonoBehaviour movement;
+    [SerializeField] bool collisionDisabled;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,17 @@ public class DevControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(collisionDisabled){
+            collision.collisionDisabled = true;
+        }
+        else if(!collisionDisabled){
+            collision.collisionDisabled = false;
+        }
         if(Input.GetKey(KeyCode.L)){
             collision.ReloadScene(1);
         }
         else if(Input.GetKey(KeyCode.C)){
-            collision.collisionDisabled = !collision.collisionDisabled;
+            collisionDisabled = !collisionDisabled;
         }
     }
 }
