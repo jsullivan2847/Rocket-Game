@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] float mainThrust =  100f;
+    [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationThrust;
     [SerializeField] AudioClip mainEngineSound;
     [SerializeField] ParticleSystem mainEngine;
@@ -26,41 +26,73 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Propel();
-        Point();
+        ProcessPropel();
+        ProcessPoint();
     }
 
-    void Propel(){
-        if(Input.GetKey(KeyCode.Space)){
-            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            if(!sound.isPlaying){
-                sound.PlayOneShot(mainEngineSound);
-            }
-            mainEngine.Play();
-        }
-        else{
-            sound.Stop();
-            mainEngine.Stop();
-        }
-    }
-
-    void Point(){
-        if(Input.GetKey(KeyCode.A))
+    void ProcessPropel()
+    {
+        if (Input.GetKey(KeyCode.Space))
         {
-            ApplyRotation(rotationThrust);
-            leftEngine.Play();
+            Propel();
         }
-        else if(Input.GetKey(KeyCode.D)){
-            ApplyRotation(-rotationThrust);
-            rightEngine.Play();
-        }
-        else{
-            leftEngine.Stop();
-            rightEngine.Stop();
+        else
+        {
+            StopPropel();
         }
     }
 
-    void ApplyRotation ( float rotation)
+    void ProcessPoint()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            RotateLeft();
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            RotateRight();
+        }
+        else
+        {
+            StopRotate();
+        }
+    }
+
+    private void StopPropel()
+    {
+        sound.Stop();
+        mainEngine.Stop();
+    }
+
+    private void Propel()
+    {
+        rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+        if (!sound.isPlaying)
+        {
+            sound.PlayOneShot(mainEngineSound);
+        }
+        mainEngine.Play();
+    }
+
+    private void StopRotate()
+    {
+        leftEngine.Stop();
+        rightEngine.Stop();
+    }
+
+    private void RotateRight()
+    {
+        ApplyRotation(-rotationThrust);
+        rightEngine.Play();
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(rotationThrust);
+        leftEngine.Play();
+    }
+
+    void ApplyRotation(float rotation)
     {
         rb.freezeRotation = true;
         transform.Rotate(Vector3.forward * rotation * Time.deltaTime, Space.World);

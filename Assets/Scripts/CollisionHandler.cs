@@ -13,11 +13,12 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem success;
     AudioSource sound;
     bool isTransitioning = false;
+    public bool collisionDisabled = false;
     void OnCollisionEnter(Collision other)
     {
         sound = GetComponent<AudioSource>();
 
-        if(isTransitioning) return;
+        if(isTransitioning || collisionDisabled) return;
 
             switch (other.gameObject.tag)
             {
@@ -60,7 +61,7 @@ public class CollisionHandler : MonoBehaviour
         movement.enabled = false;
         StartCoroutine(WaitAndLoad(0.7f, 0));
     }
-    void ReloadScene(int mod)
+    public void ReloadScene(int mod)
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         if (currentScene + mod == SceneManager.sceneCountInBuildSettings)
